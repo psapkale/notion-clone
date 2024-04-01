@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
    images: {
-      remotePatterns: ["files.edgestore.dev"],
+      domains: ["files.edgestore.dev"],
    },
 };
 
