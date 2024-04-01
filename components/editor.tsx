@@ -30,18 +30,16 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
          : undefined,
       uploadFile: handleUpload,
    });
-   // ({
-   // initialContent: initialContent
-   // ? (JSON.parse(initialContent) as PartialBlock[])
-   // : undefined,
-   // onEditorContentChange: (editor) => {
-   //    onChange(JSON.stringify(editor.topLevelBlock, null, 2));
-   // }
-   // }),
+
+   const handleChange = () => {
+      onChange(JSON.stringify(editor.document, null, 2));
+   };
 
    return (
       <div>
          <BlockNoteView
+            editable={editable}
+            onChange={handleChange}
             editor={editor}
             theme={resolvedTheme === "dark" ? "dark" : "light"}
          />
