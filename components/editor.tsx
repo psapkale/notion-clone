@@ -5,6 +5,7 @@ import { useCreateBlockNote, BlockNoteView } from "@blocknote/react";
 import { useTheme } from "next-themes";
 import { useEdgeStore } from "@/lib/edgestore";
 import "@blocknote/react/style.css";
+import "./style.css";
 
 interface EditorProps {
    onChange: (value: string) => void;
@@ -42,6 +43,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
             onChange={handleChange}
             editor={editor}
             theme={resolvedTheme === "dark" ? "dark" : "light"}
+            data-theming-css-variables
          />
       </div>
    );
