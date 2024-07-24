@@ -1,10 +1,12 @@
 "use client";
 
 import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
-import { useCreateBlockNote, BlockNoteView } from "@blocknote/react";
+import { useCreateBlockNote } from "@blocknote/react";
+import { BlockNoteView } from "@blocknote/mantine";
 import { useTheme } from "next-themes";
 import { useEdgeStore } from "@/lib/edgestore";
-import "@blocknote/react/style.css";
+import "@blocknote/core/fonts/inter.css";
+import "@blocknote/mantine/style.css";
 import "./style.css";
 
 interface EditorProps {
